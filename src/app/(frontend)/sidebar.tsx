@@ -5,9 +5,21 @@ import { usePathname } from 'next/navigation'
 import { Box, Divider, NavLink, ScrollArea, Text, Title } from '@mantine/core'
 
 const navItems = [
-  { label: 'Introduction', href: '/introduction', file: 'app/(frontend)/introduction/page.tsx' },
-  { label: 'Blog', href: '/blog', file: 'app/(frontend)/blog/page.tsx' },
-  { label: 'Dashboard', href: '/dashboard', file: 'app/(frontend)/dashboard/layout.tsx' },
+  { label: 'Úvod', href: '/introduction', file: 'app/(frontend)/introduction/page.tsx' },
+  { label: 'Modlitby', href: '/introduction', file: 'app/(frontend)/introduction/page.tsx' },
+  { label: 'Poslání a cíl', href: '/introduction', file: 'app/(frontend)/introduction/page.tsx' },
+  { label: 'Více o ADS', href: '/introduction', file: 'app/(frontend)/introduction/page.tsx' },
+  { label: 'Farnost jako rodina', href: '/blog', file: 'app/(frontend)/blog/page.tsx' },
+  {
+    label: 'Ezechielova vize',
+    href: '/introduction',
+    file: 'app/(frontend)/introduction/page.tsx',
+  },
+  { label: 'Čtenářský koutek', href: '/dashboard', file: 'app/(frontend)/dashboard/layout.tsx' },
+  { label: 'Kázání', href: '/introduction', file: 'app/(frontend)/introduction/page.tsx' },
+  { label: 'Kontakt', href: '/introduction', file: 'app/(frontend)/introduction/page.tsx' },
+  { label: 'Královská cesta', href: '/introduction', file: 'app/(frontend)/introduction/page.tsx' },
+  { label: 'Útěcha v písni', href: '/introduction', file: 'app/(frontend)/introduction/page.tsx' },
 ]
 
 export default function AppSidebar() {
