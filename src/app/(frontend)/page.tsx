@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { getPayload } from 'payload'
 import React from 'react'
 import { fileURLToPath } from 'url'
+import { Button, Code, Container, Flex, Group, Paper, Stack, Text, Title } from '@mantine/core'
 
 import config from '@/payload.config'
 import './styles.css'
@@ -16,44 +17,50 @@ export default async function HomePage() {
   const fileURL = `vscode://file/${fileURLToPath(import.meta.url)}`
 
   return (
-    <div className="home">
-      <div className="content">
-        <picture>
-          <source srcSet="https://raw.githubusercontent.com/payloadcms/payload/3.x/packages/ui/src/assets/payload-favicon.svg" />
+    <Flex direction="row" align="center" justify="center" className="min-h-screen p-4">
+      <Stack gap="xl">
+        <Group align="center" gap="md">
           <Image
             alt="Payload Logo"
             height={65}
             src="https://raw.githubusercontent.com/payloadcms/payload/3.x/packages/ui/src/assets/payload-favicon.svg"
             width={65}
           />
-        </picture>
-        {!user && <h1>Welcome to your new project.</h1>}
-        {user && <h1>Welcome back, {user.email}</h1>}
-        <div className="links">
-          <a
-            className="admin"
-            href={payloadConfig.routes.admin}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
+          <div>
+            {!user && <Title order={1}>Welcome to your new project.</Title>}
+            {user && <Title order={1}>Welcome back, {user.email}</Title>}
+            <Text color="dimmed" mt="xs">
+              A Mantine-powered page shell with your current frontend routes.
+            </Text>
+          </div>
+        </Group>
+
+        <Group gap={'xl'}>
+          <Button component="a" href={payloadConfig.routes.admin} target="_blank" rel="noreferrer">
             Go to admin panel
-          </a>
-          <a
-            className="docs"
+          </Button>
+          <Button
+            component="a"
             href="https://payloadcms.com/docs"
-            rel="noopener noreferrer"
             target="_blank"
+            rel="noreferrer"
+            variant="outline"
           >
             Documentation
-          </a>
-        </div>
-      </div>
-      <div className="footer">
-        <p>Update this page by editing</p>
-        <a className="codeLink" href={fileURL}>
-          <code>app/(frontend)/page.tsx</code>
-        </a>
-      </div>
-    </div>
+          </Button>
+        </Group>
+
+        <Text color="dimmed">
+          Update this page by editing <Code>app/(frontend)/page.tsx</Code>
+        </Text>
+
+        <Text size="sm" color="dimmed">
+          Open this file directly in your editor:
+          <Button component="a" variant="subtle" size="xs" href={fileURL}>
+            app/(frontend)/page.tsx
+          </Button>
+        </Text>
+      </Stack>
+    </Flex>
   )
 }
