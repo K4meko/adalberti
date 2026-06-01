@@ -6,20 +6,32 @@ import { Box, Divider, NavLink, ScrollArea, Text, Title } from '@mantine/core'
 
 const navItems = [
   { label: 'Úvod', href: '/introduction', file: 'app/(frontend)/introduction/page.tsx' },
-  { label: 'Modlitby', href: '/introduction', file: 'app/(frontend)/introduction/page.tsx' },
-  { label: 'Poslání a cíl', href: '/introduction', file: 'app/(frontend)/introduction/page.tsx' },
-  { label: 'Více o ADS', href: '/introduction', file: 'app/(frontend)/introduction/page.tsx' },
-  { label: 'Farnost jako rodina', href: '/blog', file: 'app/(frontend)/blog/page.tsx' },
+  { label: 'Modlitby', href: '/modlitby', file: 'app/(frontend)/modlitby/page.tsx' },
+  { label: 'Poslání a cíl', href: '/poslani-a-cil', file: 'app/(frontend)/poslani-a-cil/page.tsx' },
+  { label: 'Více o ADS', href: '/vice-o-ads', file: 'app/(frontend)/vice-o-ads/page.tsx' },
+  {
+    label: 'Farnost jako rodina',
+    href: '/farnost-jako-rodina',
+    file: 'app/(frontend)/farnost-jako-rodina/page.tsx',
+  },
   {
     label: 'Ezechielova vize',
-    href: '/introduction',
-    file: 'app/(frontend)/introduction/page.tsx',
+    href: '/ezechielova-vize',
+    file: 'app/(frontend)/ezechielova-vize/page.tsx',
   },
-  { label: 'Čtenářský koutek', href: '/dashboard', file: 'app/(frontend)/dashboard/layout.tsx' },
-  { label: 'Kázání', href: '/introduction', file: 'app/(frontend)/introduction/page.tsx' },
-  { label: 'Kontakt', href: '/introduction', file: 'app/(frontend)/introduction/page.tsx' },
-  { label: 'Královská cesta', href: '/introduction', file: 'app/(frontend)/introduction/page.tsx' },
-  { label: 'Útěcha v písni', href: '/introduction', file: 'app/(frontend)/introduction/page.tsx' },
+  { label: 'Čtenářský koutek', href: '/blog', file: 'app/(frontend)/blog/page.tsx' },
+  { label: 'Kázání', href: '/kazani', file: 'app/(frontend)/kazani/page.tsx' },
+  { label: 'Kontakt', href: '/kontakt', file: 'app/(frontend)/kontakt/page.tsx' },
+  {
+    label: 'Královská cesta',
+    href: '/kralovska-cesta',
+    file: 'app/(frontend)/kralovska-cesta/page.tsx',
+  },
+  {
+    label: 'Útěcha v písni',
+    href: '/utecha-v-pisni',
+    file: 'app/(frontend)/utecha-v-pisni/page.tsx',
+  },
 ]
 
 export default function AppSidebar() {
@@ -39,7 +51,7 @@ export default function AppSidebar() {
           {navItems.map((item) => {
             const active = pathname === item.href
 
-            return <NavLink key={item.href} href={item.href} label={item.label}></NavLink>
+            return <NavLink key={item.label} href={item.href} label={item.label} active={active} />
           })}
         </Box>
       </ScrollArea>

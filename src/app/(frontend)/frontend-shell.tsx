@@ -28,7 +28,7 @@ export default function FrontendShell({ children }: { children: React.ReactNode 
         </Group>
       </AppShellHeader>
 
-      <AppShellNavbar p="md">
+      <AppShellNavbar p={0} className="flex flex-col">
         <AppSidebar />
       </AppShellNavbar>
 

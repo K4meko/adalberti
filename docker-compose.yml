@@ -2,14 +2,19 @@ version: '3'
 
 services:
   payload:
-    image: node:20-alpine
+    image: node:22-alpine
     ports:
       - '3000:3000'
     volumes:
       - .:/home/node/app
       - node_modules:/home/node/app/node_modules
+      - pnpm_store:/root/.local/share/pnpm/store
     working_dir: /home/node/app/
-    command: sh -c "corepack enable && corepack prepare pnpm@latest --activate && pnpm install && pnpm dev"
+    command: >-
+      sh -c "apk add --no-cache libc6-compat >/dev/null 2>&1;
+      corepack enable && corepack prepare pnpm@10 --activate;
+      if [ ! -f node_modules/.modules.yaml ]; then pnpm install; fi;
+      pnpm dev"
     depends_on:
       - mongo
       # - postgres
@@ -41,3 +46,4 @@ volumes:
   data:
   # pgdata:
   node_modules:
+  pnpm_store:

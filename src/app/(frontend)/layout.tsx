@@ -25,8 +25,10 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
 
   return (
     <html lang="en" {...mantineHtmlProps}>
-      <body className={`${bodyFont.variable} ${headingFont.variable}`}>
+      <head>
         <ColorSchemeScript defaultColorScheme="light" />
+      </head>
+      <body className={`${bodyFont.variable} ${headingFont.variable}`}>
         <MantineProvider>
           <FrontendShell>{children}</FrontendShell>
         </MantineProvider>
