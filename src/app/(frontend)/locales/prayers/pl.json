@@ -1,0 +1,26 @@
+{
+  "heading": "Modlitwa za potrzeby duchowe wszystkich",
+  "subheading": "Sił Zbrojnych Republiki Czeskiej",
+  "morning": {
+    "title": "Modlitwa poranna:",
+    "text": "Panie Jezu, prosimy w ten rozpoczynający się dzień i na całe życie, aby Duch Święty uczynił mnie i moich bliźnich narzędziem pokoju. Daj, abym podążała za Oblubienicą Ducha Świętego, Dziewicą Marią, i w każdej chwili żyła jej „tak”. Chcę to wypełnić wierną i czujną strażą w służbie Ducha Świętego."
+  },
+  "invocationClosing": "moje serce i serca tych, którzy się mną opiekują i są związani z Głównym kapelanem w Duchowej służbie AČR.",
+  "invocations": [
+    { "time": "7.00", "text": "Duchu Święty, ukoronuj darem mądrości…" },
+    { "time": "9.00", "text": "Duchu Święty, ukoronuj darem rozumu…" },
+    { "time": "11.00", "text": "Duchu Święty, ukoronuj darem rady…" },
+    { "time": "13.00", "text": "Duchu Święty, ukoronuj darem męstwa…" },
+    { "time": "15.00", "text": "Duchu Święty, ukoronuj darem wiedzy…" },
+    { "time": "17.00", "text": "Duchu Święty, ukoronuj darem pobożności…" },
+    { "time": "19.00", "text": "Duchu Święty, ukoronuj darem bojaźni Bożej…" }
+  ],
+  "evening": {
+    "title": "Modlitwa wieczorna:",
+    "paragraphs": [
+      "Dziękuję Ci, mój Baranku, że Twoja moc umacnia mnie, abym pomagała w noszeniu i zdejmowaniu brzemion i trosk codzienności oraz w przynoszeniu pociechy, składając Duchowi Świętemu usilną prośbę o Jego wzniosłe dary dla służby duchowej we wszystkich rodzajach sił zbrojnych na czele z Głównym kapelanem.",
+      "Proszę Cię, Baranku, który gładzisz grzechy świata, zdejmij z nas codzienne słabości i porażki, abyśmy mogli prawdziwie miłować naszych braci i siostry Twoją miłosierną miłością.",
+      "Ty jesteś Panem czasu i dziejów ludzkich, który żyjesz i panujesz nad przeszłością, teraźniejszością i przyszłością. Prosimy o spokojny odpoczynek przez Ciebie, z Tobą i w Tobie. Bądź naszą Drogą, Prawdą i Życiem. Amen."
+    ]
+  }
+}

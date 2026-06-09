@@ -5,6 +5,8 @@ import { RichText } from '@payloadcms/richtext-lexical/react'
 import { Container, Paper, Stack, Text, Title } from '@mantine/core'
 
 import { MantineNextLink } from '../../mantine-next-link'
+import { getCommonTranslations } from '../../locales/get-translations'
+import { getLocale } from '../../locales/locale'
 import config from '@/payload.config'
 
 type Props = {
@@ -13,6 +15,8 @@ type Props = {
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params
+  const locale = await getLocale()
+  const t = getCommonTranslations(locale)
   const payload = await getPayload({ config: await config })
 
   const { docs } = await payload.find({
@@ -27,7 +31,8 @@ export default async function BlogPostPage({ params }: Props) {
   const post = docs[0]
   if (!post) notFound()
 
-  const date = new Date(post.createdAt).toLocaleDateString('cs-CZ', {
+  const dateLocale = locale === 'cs' ? 'cs-CZ' : 'en-GB'
+  const date = new Date(post.createdAt).toLocaleDateString(dateLocale, {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
@@ -38,7 +43,7 @@ export default async function BlogPostPage({ params }: Props) {
       <Paper radius="md" p="xl" withBorder>
         <Stack gap="md">
           <MantineNextLink href="/blog" size="sm">
-            ← Back to blog
+            {t.blog.backToBlog}
           </MantineNextLink>
           <Title order={1}>{post.title}</Title>
           <Text size="sm" c="dimmed">

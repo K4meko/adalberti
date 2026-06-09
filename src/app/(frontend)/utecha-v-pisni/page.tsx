@@ -1,18 +1,7 @@
-import React from 'react'
-import { Code, Container, Paper, Stack, Text, Title } from '@mantine/core'
+import PlaceholderPage from '@/app/(frontend)/_components/placeholder-page'
 
-export default async function UtechaVPisniPage() {
+export default function UtechaVPisniPage() {
   return (
-    <Container size="md" py="xl">
-      <Paper radius="md" p="xl" withBorder>
-        <Stack>
-          <Title order={1}>Útěcha v písni</Title>
-          <Text color="dimmed">Obsah stránky bude doplněn.</Text>
-          <Text size="sm" color="dimmed">
-            Source file: <Code>app/(frontend)/utecha-v-pisni/page.tsx</Code>
-          </Text>
-        </Stack>
-      </Paper>
-    </Container>
+    <PlaceholderPage navKey="utecha-v-pisni" sourceFile="app/(frontend)/utecha-v-pisni/page.tsx" />
   )
 }

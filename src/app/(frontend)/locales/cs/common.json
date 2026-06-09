@@ -1,0 +1,29 @@
+{
+  "sidebar": {
+    "title": "Stránky",
+    "subtitle": "Odpovídá aktuálním souborům a trasám.",
+    "footer": "Postaveno na Mantine a Next.js App Router."
+  },
+  "nav": {
+    "introduction": "Úvod",
+    "modlitby": "Modlitby",
+    "poslani-a-cil": "Poslání a cíl",
+    "vice-o-ads": "Více o ADS",
+    "farnost-jako-rodina": "Farnost jako rodina",
+    "ezechielova-vize": "Ezechielova vize",
+    "blog": "Čtenářský koutek",
+    "kazani": "Kázání",
+    "kontakt": "Kontakt",
+    "kralovska-cesta": "Královská cesta",
+    "utecha-v-pisni": "Útěcha v písni"
+  },
+  "placeholder": "Obsah stránky bude doplněn.",
+  "sourceFile": "Zdrojový soubor:",
+  "blog": {
+    "empty": "Zatím nejsou žádné publikované příspěvky. Vytvořte jeden v",
+    "emptyAdmin": "administraci",
+    "emptySuffix": "a klikněte na Publikovat.",
+    "readMore": "Číst dále",
+    "backToBlog": "← Zpět na blog"
+  }
+}

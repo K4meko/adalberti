@@ -1,17 +1,19 @@
 import React from 'react'
-import { Code, Container, Paper, Stack, Text, Title } from '@mantine/core'
+import { Container, Paper } from '@mantine/core'
+import PrayersContent from '@/app/(frontend)/_components/prayers-content'
+import { getCommonTranslations } from '@/app/(frontend)/locales/get-translations'
+import { getLocale } from '@/app/(frontend)/locales/locale'
+import { getPrayerLocale } from '@/app/(frontend)/locales/prayers/locale'
 
 export default async function ModlitbyPage() {
+  const siteLocale = await getLocale()
+  const common = getCommonTranslations(siteLocale)
+  const prayerLocale = await getPrayerLocale()
+
   return (
     <Container size="md" py="xl">
       <Paper radius="md" p="xl" withBorder>
-        <Stack>
-          <Title order={1}>Modlitby</Title>
-          <Text color="dimmed">Obsah stránky bude doplněn.</Text>
-          <Text size="sm" color="dimmed">
-            Source file: <Code>app/(frontend)/modlitby/page.tsx</Code>
-          </Text>
-        </Stack>
+        <PrayersContent pageTitle={common.nav.modlitby} initialLocale={prayerLocale} />
       </Paper>
     </Container>
   )

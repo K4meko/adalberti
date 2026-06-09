@@ -4,7 +4,6 @@ import { getPayload } from 'payload'
 import React from 'react'
 import { fileURLToPath } from 'url'
 import { Button, Code, Container, Flex, Group, Paper, Stack, Text, Title } from '@mantine/core'
-import i18next from 'i18next';
 import config from '@/payload.config'
 import './styles.css'
 

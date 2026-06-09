@@ -1,0 +1,26 @@
+{
+  "heading": "Prayer for the spiritual needs of all",
+  "subheading": "Armed Forces of the Czech Republic",
+  "morning": {
+    "title": "Morning prayer:",
+    "text": "Lord Jesus, we ask that on this beginning day and throughout our lives the Holy Spirit may make me and those close to me instruments of peace. Grant that I may follow the Bride of the Holy Spirit, the Virgin Mary, and in every moment live her “Yes.” I wish to fulfil it through faithful and watchful service in the ministry of the Holy Spirit."
+  },
+  "invocationClosing": "my heart and the hearts of those who care for me and are united with the Chief Chaplain in the Spiritual Service of the ACR.",
+  "invocations": [
+    { "time": "7.00", "text": "Holy Spirit, crown with the gift of wisdom…" },
+    { "time": "9.00", "text": "Holy Spirit, crown with the gift of understanding…" },
+    { "time": "11.00", "text": "Holy Spirit, crown with the gift of counsel…" },
+    { "time": "13.00", "text": "Holy Spirit, crown with the gift of fortitude…" },
+    { "time": "15.00", "text": "Holy Spirit, crown with the gift of knowledge…" },
+    { "time": "17.00", "text": "Holy Spirit, crown with the gift of piety…" },
+    { "time": "19.00", "text": "Holy Spirit, crown with the gift of fear of the Lord…" }
+  ],
+  "evening": {
+    "title": "Evening prayer:",
+    "paragraphs": [
+      "Thank you, my Lamb, that your power enables me to help bear and lift the burdens and cares of each day and to bring comfort by offering to the Holy Spirit an earnest plea for his sublime gifts for spiritual service in all branches of the armed forces under the Chief Chaplain.",
+      "I ask you, Lamb who takes away the sins of the world, remove from us our daily weaknesses and failures, so that we may truly love our brothers and sisters with your merciful love.",
+      "You are the Lord of time and of human history, who lives and reigns over past, present and future. We ask for peaceful rest through you, with you and in you. Be our Way, Truth and Life. Amen."
+    ]
+  }
+}

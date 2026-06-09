@@ -1,0 +1,29 @@
+{
+  "sidebar": {
+    "title": "Pages",
+    "subtitle": "Reflects current files and routes.",
+    "footer": "Built with Mantine and Next.js App Router."
+  },
+  "nav": {
+    "introduction": "Introduction",
+    "modlitby": "Prayers",
+    "poslani-a-cil": "Mission and goal",
+    "vice-o-ads": "More about ADS",
+    "farnost-jako-rodina": "Parish as a family",
+    "ezechielova-vize": "Ezekiel's vision",
+    "blog": "Reader's corner",
+    "kazani": "Sermons",
+    "kontakt": "Contact",
+    "kralovska-cesta": "Royal way",
+    "utecha-v-pisni": "Comfort in song"
+  },
+  "placeholder": "Page content will be added.",
+  "sourceFile": "Source file:",
+  "blog": {
+    "empty": "No published posts yet. Create one in the",
+    "emptyAdmin": "admin panel",
+    "emptySuffix": "and click Publish.",
+    "readMore": "Read more",
+    "backToBlog": "← Back to blog"
+  }
+}

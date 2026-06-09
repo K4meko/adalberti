@@ -3,10 +3,14 @@ import React from 'react'
 import { Anchor, Container, Paper, Stack, Text, Title } from '@mantine/core'
 
 import { MantineNextLink } from '../mantine-next-link'
+import { getCommonTranslations } from '../locales/get-translations'
+import { getLocale } from '../locales/locale'
 import config from '@/payload.config'
 import type { Post } from '@/payload-types'
 
 export default async function BlogPage() {
+  const locale = await getLocale()
+  const t = getCommonTranslations(locale)
   const payload = await getPayload({ config: await config })
 
   const { docs: posts } = await payload.find({
@@ -16,26 +20,38 @@ export default async function BlogPage() {
     limit: 100,
   })
 
+  const dateLocale = locale === 'cs' ? 'cs-CZ' : 'en-GB'
+
   return (
     <Container size="md" py="xl">
       <Stack gap="lg">
-        <Title order={1}>Blog</Title>
+        <Title order={1}>{t.nav.blog}</Title>
 
         {posts.length === 0 ? (
           <Text c="dimmed">
-            No published posts yet. Create one in the{' '}
-            <Anchor href="/admin/collections/posts">admin panel</Anchor> and click Publish.
+            {t.blog.empty}{' '}
+            <Anchor href="/admin/collections/posts">{t.blog.emptyAdmin}</Anchor> {t.blog.emptySuffix}
           </Text>
         ) : (
-          posts.map((post) => <PostCard key={post.id} post={post} />)
+          posts.map((post) => (
+            <PostCard key={post.id} post={post} dateLocale={dateLocale} readMore={t.blog.readMore} />
+          ))
         )}
       </Stack>
     </Container>
   )
 }
 
-function PostCard({ post }: { post: Post }) {
-  const date = new Date(post.createdAt).toLocaleDateString('cs-CZ', {
+function PostCard({
+  post,
+  dateLocale,
+  readMore,
+}: {
+  post: Post
+  dateLocale: string
+  readMore: string
+}) {
+  const date = new Date(post.createdAt).toLocaleDateString(dateLocale, {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
@@ -54,7 +70,7 @@ function PostCard({ post }: { post: Post }) {
         </Text>
         {post.excerpt && <Text c="dimmed">{post.excerpt}</Text>}
         <MantineNextLink href={`/blog/${post.slug}`} size="sm">
-          Read more
+          {readMore}
         </MantineNextLink>
       </Stack>
     </Paper>

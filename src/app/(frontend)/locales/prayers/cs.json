@@ -1,0 +1,26 @@
+{
+  "heading": "Modlitba za duchovní potřeby všech",
+  "subheading": "Armádních složek České republiky",
+  "morning": {
+    "title": "Ranní modlitba:",
+    "text": "Pane Ježíši, prosíme v tento začínající den i celý život, ať Duch Svatý učiní mne i mé bližní nástrojem pokoje. Dej, abych následoval(a) Snoubenku Ducha Svatého, Pannu Marii, a v každém okamžiku žil(a) její „Ano“. Chci ho naplnit věrnou a bdělou stráží ve službě Ducha Svatého."
+  },
+  "invocationClosing": "mé srdce a srdce těch, kteří se o mne starají a jsou spojeni s Hlavním kaplanem v Duchovní službě AČR.",
+  "invocations": [
+    { "time": "7.00", "text": "Duchu Svatý, korunuj darem moudrosti…" },
+    { "time": "9.00", "text": "Duchu Svatý, korunuj darem rozumu…" },
+    { "time": "11.00", "text": "Duchu Svatý, korunuj darem rady…" },
+    { "time": "13.00", "text": "Duchu Svatý, korunuj darem síly…" },
+    { "time": "15.00", "text": "Duchu Svatý, korunuj darem poznání…" },
+    { "time": "17.00", "text": "Duchu Svatý, korunuj darem zbožnosti…" },
+    { "time": "19.00", "text": "Duchu Svatý, korunuj darem bázně Boží…" }
+  ],
+  "evening": {
+    "title": "Večerní modlitba:",
+    "paragraphs": [
+      "Děkuji, můj Beránku, že mě Tvá moc uschopňuje, abych pomáhal(a) v nesení a snímání břemen a starostí všedního dne a v předávání útěchy tím, že Duchu Svatému předkládám úpěnlivou prosbu o jeho vznešené dary pro duchovní službu ve všech armádních složkách v čele s Hlavním kaplanem.",
+      "Prosím, Tebe, Beránku, který snímáš hříchy světa, sejmi z nás každodenní slabosti a selhání, abychom byli schopni Tvou milosrdnou láskou opravdově milovat své bratry a sestry.",
+      "Ty jsi Pánem času a lidských dějin, který žiješ a vládneš minulosti, přítomnosti a budoucnosti. Prosíme o pokojný odpočinek skrze Tebe, s Tebou a v Tobě. Buď naší Cestou, Pravdou a Životem. Amen."
+    ]
+  }
+}

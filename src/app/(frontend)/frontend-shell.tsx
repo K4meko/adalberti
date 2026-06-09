@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react'
 import AppSidebar from './sidebar'
+import LanguageSwitcher from './language-switcher'
+import type { Locale } from './locales/get-translations'
 import {
   AppShell,
   AppShellNavbar,
@@ -12,7 +14,12 @@ import {
   Text,
 } from '@mantine/core'
 
-export default function FrontendShell({ children }: { children: React.ReactNode }) {
+type FrontendShellProps = {
+  children: React.ReactNode
+  locale: Locale
+}
+
+export default function FrontendShell({ children, locale }: FrontendShellProps) {
   const [opened, setOpened] = useState(false)
 
   return (
@@ -22,9 +29,10 @@ export default function FrontendShell({ children }: { children: React.ReactNode 
       navbar={{ width: 280, breakpoint: 'sm', collapsed: { mobile: !opened } }}
     >
       <AppShellHeader height={56} p="md">
-        <Group position="apart">
+        <Group justify="space-between">
           <Burger opened={opened} onClick={() => setOpened((o) => !o)} size="sm" />
           <Text fw={700}>ADALBERTI</Text>
+          <LanguageSwitcher locale={locale} />
         </Group>
       </AppShellHeader>
 

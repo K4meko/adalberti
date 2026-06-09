@@ -2,6 +2,9 @@ import React from 'react'
 import './global.css'
 import { Inter, Playfair_Display } from 'next/font/google'
 import FrontendShell from './frontend-shell'
+import { LocaleProvider } from './locale-context'
+import { getCommonTranslations } from './locales/get-translations'
+import { getLocale } from './locales/locale'
 import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from '@mantine/core'
 import '@mantine/core/styles.css'
 
@@ -22,15 +25,19 @@ export const metadata = {
 
 export default async function RootLayout(props: { children: React.ReactNode }) {
   const { children } = props
+  const locale = await getLocale()
+  const common = getCommonTranslations(locale)
 
   return (
-    <html lang="en" {...mantineHtmlProps}>
+    <html lang={locale} {...mantineHtmlProps}>
       <head>
         <ColorSchemeScript defaultColorScheme="light" />
       </head>
       <body className={`${bodyFont.variable} ${headingFont.variable}`}>
         <MantineProvider>
-          <FrontendShell>{children}</FrontendShell>
+          <LocaleProvider locale={locale} common={common}>
+            <FrontendShell locale={locale}>{children}</FrontendShell>
+          </LocaleProvider>
         </MantineProvider>
       </body>
     </html>

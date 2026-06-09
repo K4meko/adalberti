@@ -1,0 +1,26 @@
+{
+  "heading": "Oratio pro necessitatibus spiritualibus omnium",
+  "subheading": "Exercitus Rei publicae Bohemicae",
+  "morning": {
+    "title": "Oratio matutina:",
+    "text": "Domine Iesu Christe, hac die incipiente totaque vita rogamus ut Spiritus Sanctus perficiat me atque proximos meos instrumentum pacis. Fac me sequi Spiritus Sancti sponsam, Beatissimam Virginem Mariam et omni momento vivere “Fiat” eius. Desidero adimplere illud, fideli ac vigilanti custodia in Sancti Spiritus ministerio."
+  },
+  "invocationClosing": "cor meum atque cor eorum, quibus attinget cura de me iunctique sunt cum Capellano principali in Servitio spirituali Exercitus Rei publicae Bohemicae",
+  "invocations": [
+    { "time": "7.00", "text": "Spiritus Sancte, corona dono sapientiae..." },
+    { "time": "9.00", "text": "Spiritus Sancte, corona dono intellectus..." },
+    { "time": "11.00", "text": "Spiritus Sancte, corona dono concilii..." },
+    { "time": "13.00", "text": "Spiritus Sancte, corona dono fortitudinis..." },
+    { "time": "15.00", "text": "Spiritus Sancte, corona dono scientiae..." },
+    { "time": "17.00", "text": "Spiritus Sancte, corona dono pietatis..." },
+    { "time": "19.00", "text": "Spiritus Sancte, corona dono timoris Dei..." }
+  ],
+  "evening": {
+    "title": "Oratio vespertina:",
+    "paragraphs": [
+      "Gratias ago Tibi, Agnus meus, quia potestas Tua roborat me, ut possim adiuvare ad portandum atque levandum onera atque sollicitudines cottidianas, tradere quoque consolationem deprecationem instantem Spiritui Sancto proponens pro dona eius sublimia ad ministerium sprituale adimplendum in omnibus partibus exercitui una cum Capellano principali.",
+      "Rogo te, Agnus, qui tollis peccata mundi, tolle a nobis fragilitatem atque lapsus cottidianos, ut possimus dilectione Tua misericordi vere fratres ac sorores nostras diligere.",
+      "Tu enim Dominus temporis et historiae humanae es, qui vivis et dominas tempora praeterita, praesentia atque futura. Precamur pro requiem quietam per Te, Tecum et in Te. Tu sis Via nostra, Veritas ac Vita. Amen"
+    ]
+  }
+}

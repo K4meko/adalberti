@@ -1,18 +1,7 @@
-import React from 'react'
-import { Code, Container, Paper, Stack, Text, Title } from '@mantine/core'
+import PlaceholderPage from '@/app/(frontend)/_components/placeholder-page'
 
-export default async function EzechielovaVizePage() {
+export default function EzechielovaVizePage() {
   return (
-    <Container size="md" py="xl">
-      <Paper radius="md" p="xl" withBorder>
-        <Stack>
-          <Title order={1}>Ezechielova vize</Title>
-          <Text color="dimmed">Obsah stránky bude doplněn.</Text>
-          <Text size="sm" color="dimmed">
-            Source file: <Code>app/(frontend)/ezechielova-vize/page.tsx</Code>
-          </Text>
-        </Stack>
-      </Paper>
-    </Container>
+    <PlaceholderPage navKey="ezechielova-vize" sourceFile="app/(frontend)/ezechielova-vize/page.tsx" />
   )
 }
