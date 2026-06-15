@@ -1,8 +1,8 @@
 'use client'
 
 import { SegmentedControl } from '@mantine/core'
-import { PRAYER_LOCALE_OPTIONS, PRAYERS_LOCALE_COOKIE } from '../locales/prayers/constants'
-import type { PrayerLocale } from '../locales/prayers/get-prayer-translations'
+import { PRAYER_LOCALE_OPTIONS, PRAYERS_LOCALE_COOKIE } from '@/app/(frontend)/locales/prayers/constants'
+import type { PrayerLocale } from '@/app/(frontend)/locales/prayers/get-prayer-translations'
 
 type PrayerLanguageSwitcherProps = {
   locale: PrayerLocale

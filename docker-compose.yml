@@ -10,11 +10,27 @@ services:
       - node_modules:/home/node/app/node_modules
       - pnpm_store:/root/.local/share/pnpm/store
     working_dir: /home/node/app/
+    environment:
+      # Required for Next.js hot reload when the project folder is bind-mounted on Windows
+      WATCHPACK_POLLING: 'true'
+      CHOKIDAR_USEPOLLING: 'true'
     command: >-
       sh -c "apk add --no-cache libc6-compat >/dev/null 2>&1;
       corepack enable && corepack prepare pnpm@10 --activate;
       if [ ! -f node_modules/.modules.yaml ]; then pnpm install; fi;
       pnpm dev"
+    develop:
+      watch:
+        - action: sync+exec
+          path: ./package.json
+          target: /home/node/app/package.json
+          exec:
+            command: pnpm install
+        - action: sync+exec
+          path: ./pnpm-lock.yaml
+          target: /home/node/app/pnpm-lock.yaml
+          exec:
+            command: pnpm install
     depends_on:
       - mongo
       # - postgres

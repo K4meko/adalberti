@@ -2,8 +2,9 @@ import { notFound } from 'next/navigation'
 import { getPayload } from 'payload'
 import React from 'react'
 import { RichText } from '@payloadcms/richtext-lexical/react'
-import { Container, Paper, Stack, Text, Title } from '@mantine/core'
+import { Stack, Text, Title } from '@mantine/core'
 
+import PageCard from '@/components/page-card'
 import { MantineNextLink } from '../../mantine-next-link'
 import { getCommonTranslations } from '../../locales/get-translations'
 import { getLocale } from '../../locales/locale'
@@ -39,24 +40,22 @@ export default async function BlogPostPage({ params }: Props) {
   })
 
   return (
-    <Container size="md" py="xl">
-      <Paper radius="md" p="xl" withBorder>
-        <Stack gap="md">
-          <MantineNextLink href="/blog" size="sm">
-            {t.blog.backToBlog}
-          </MantineNextLink>
-          <Title order={1}>{post.title}</Title>
-          <Text size="sm" c="dimmed">
-            {date}
+    <PageCard>
+      <Stack gap="md">
+        <MantineNextLink href="/blog" size="sm" c="forest.7" fw={600}>
+          {t.blog.backToBlog}
+        </MantineNextLink>
+        <Title order={1}>{post.title}</Title>
+        <Text size="sm" c="forest.6">
+          {date}
+        </Text>
+        {post.excerpt && (
+          <Text size="lg" c="dimmed" style={{ lineHeight: 1.7 }}>
+            {post.excerpt}
           </Text>
-          {post.excerpt && (
-            <Text size="lg" c="dimmed">
-              {post.excerpt}
-            </Text>
-          )}
-          <RichText data={post.content} />
-        </Stack>
-      </Paper>
-    </Container>
+        )}
+        <RichText data={post.content} />
+      </Stack>
+    </PageCard>
   )
 }

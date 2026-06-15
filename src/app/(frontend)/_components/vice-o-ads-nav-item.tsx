@@ -25,7 +25,7 @@ export default function ViceOAdsNavItem() {
       zIndex={1000}
     >
       <Menu.Target>
-        <Box>
+        <Box className="sidebar-nav">
           <NavLink
             component={Link}
             href={`/vice-o-ads/${viceOAdsSections[0].slug}`}
@@ -46,6 +46,7 @@ export default function ViceOAdsNavItem() {
               component={Link}
               href={href}
               fw={active ? 600 : 400}
+              c={active ? 'forest.7' : undefined}
               styles={{
                 item: {
                   whiteSpace: 'normal',

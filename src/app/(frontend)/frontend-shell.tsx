@@ -9,6 +9,7 @@ import {
   AppShellNavbar,
   AppShellMain,
   AppShellHeader,
+  Box,
   Burger,
   Group,
   Text,
@@ -19,19 +20,37 @@ type FrontendShellProps = {
   locale: Locale
 }
 
+const sidebarColor = 'var(--adalberti-sidebar)'
+
 export default function FrontendShell({ children, locale }: FrontendShellProps) {
   const [opened, setOpened] = useState(false)
 
   return (
     <AppShell
       padding="md"
-      className="min-h-screen bg-slate-50"
+      withBorder={false}
+      header={{ height: 60 }}
       navbar={{ width: 280, breakpoint: 'sm', collapsed: { mobile: !opened } }}
+      styles={{
+        root: {
+          backgroundColor: 'var(--adalberti-bg)',
+        },
+        navbar: {
+          backgroundColor: sidebarColor,
+          borderRight: 'none',
+        },
+        header: {
+          backgroundColor: sidebarColor,
+          borderBottom: '1px solid rgba(255, 255, 255, 0.12)',
+        },
+      }}
     >
-      <AppShellHeader height={56} p="md">
-        <Group justify="space-between">
-          <Burger opened={opened} onClick={() => setOpened((o) => !o)} size="sm" />
-          <Text fw={700}>ADALBERTI</Text>
+      <AppShellHeader p="md" className="app-header">
+        <Group justify="space-between" h="100%">
+          <Burger opened={opened} onClick={() => setOpened((o) => !o)} size="sm" hiddenFrom="sm" color="white" />
+          <Text fw={700} size="lg" className="app-brand">
+            ADALBERTI
+          </Text>
           <LanguageSwitcher locale={locale} />
         </Group>
       </AppShellHeader>
@@ -40,7 +59,11 @@ export default function FrontendShell({ children, locale }: FrontendShellProps) 
         <AppSidebar />
       </AppShellNavbar>
 
-      <AppShellMain>{children}</AppShellMain>
+      <AppShellMain className="app-main">
+        <Box py="sm" bg="#f4faf6" mih="100%">
+          {children}
+        </Box>
+      </AppShellMain>
     </AppShell>
   )
 }

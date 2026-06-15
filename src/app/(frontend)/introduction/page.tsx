@@ -1,35 +1,42 @@
 import React from 'react'
-import { Code, Container, Paper, Stack, Text, Title } from '@mantine/core'
-import { getCommonTranslations, getIntroductionTranslations } from '../locales/get-translations'
+import { Stack, Text, Title } from '@mantine/core'
+import PageCard from '@/components/page-card'
+import { getIntroductionTranslations } from '../locales/get-translations'
 import { getLocale } from '../locales/locale'
 
 export default async function IntroductionPage() {
   const locale = await getLocale()
   const t = getIntroductionTranslations(locale)
-  const common = getCommonTranslations(locale)
 
   return (
-    <Container size="md" py="xl">
-      <Paper radius="md" p="xl" withBorder>
-        <Stack>
-          <Title order={1}>{t.title}</Title>
-          <Text color="dimmed" fs="italic">
-            {t.Hle_beranek}
-          </Text>
-          <Text fw={700}>{t.Mocne_zasahl}</Text>
-          <Text color="dimmed">{t.Snahy_o_zmenu}</Text>
-          <Text color="dimmed">{t.Kajicnosti}</Text>
-          <Text color="dimmed">{t.Kdo_zije}</Text>
-          <Text color="dimmed">{t.Po_tricet}</Text>
-          <Text color="dimmed" fs="italic">
-            {t.Az_udelate}
-          </Text>
-          <Text color="dimmed">{t.Tento_postoj}</Text>
-          <Text size="sm" color="dimmed">
-            {common.sourceFile} <Code>app/(frontend)/introduction/page.tsx</Code>
-          </Text>
-        </Stack>
-      </Paper>
-    </Container>
+    <PageCard>
+      <Stack gap="md">
+        <Title order={1}>{t.title}</Title>
+        <Text c="dimmed" fs="italic" style={{ lineHeight: 1.7 }}>
+          {t.Hle_beranek}
+        </Text>
+        <Text fw={700} c="forest.7">
+          {t.Mocne_zasahl}
+        </Text>
+        <Text c="dimmed" style={{ lineHeight: 1.7 }}>
+          {t.Snahy_o_zmenu}
+        </Text>
+        <Text c="dimmed" style={{ lineHeight: 1.7 }}>
+          {t.Kajicnosti}
+        </Text>
+        <Text c="dimmed" style={{ lineHeight: 1.7 }}>
+          {t.Kdo_zije}
+        </Text>
+        <Text c="dimmed" style={{ lineHeight: 1.7 }}>
+          {t.Po_tricet}
+        </Text>
+        <Text c="dimmed" fs="italic" style={{ lineHeight: 1.7 }}>
+          {t.Az_udelate}
+        </Text>
+        <Text c="dimmed" style={{ lineHeight: 1.7 }}>
+          {t.Tento_postoj}
+        </Text>
+      </Stack>
+    </PageCard>
   )
 }

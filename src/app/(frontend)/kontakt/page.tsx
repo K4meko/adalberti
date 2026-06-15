@@ -1,5 +1,5 @@
-import PlaceholderPage from '@/app/(frontend)/_components/placeholder-page'
+import PlaceholderPage from '@/components/placeholder-page'
 
 export default function KontaktPage() {
-  return <PlaceholderPage navKey="kontakt" sourceFile="app/(frontend)/kontakt/page.tsx" />
+  return <PlaceholderPage navKey="kontakt" />
 }

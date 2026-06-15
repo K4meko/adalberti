@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import React from 'react'
-import { Container, Paper, Stack, Text, Title } from '@mantine/core'
+import { Stack, Text, Title } from '@mantine/core'
+import PageCard from '@/components/page-card'
 import { getCommonTranslations, getViceOAdsTranslations } from '../../locales/get-translations'
 import { getLocale } from '../../locales/locale'
 import {
@@ -30,18 +31,16 @@ export default async function ViceOAdsSectionPage({ params }: Props) {
   const section = viceOAds.sections[slug as ViceOAdsSectionSlug]
 
   return (
-    <Container size="md" py="xl">
-      <Paper radius="md" p="xl" withBorder>
-        <Stack gap="md">
-          <Text size="sm" c="dimmed">
-            {common.nav['vice-o-ads']}
-          </Text>
-          <Title order={1}>{section.title}</Title>
-          <Text style={{ lineHeight: 1.7 }} c="dimmed">
-            {section.content}
-          </Text>
-        </Stack>
-      </Paper>
-    </Container>
+    <PageCard>
+      <Stack gap="md">
+        <Text size="sm" c="forest.6" tt="uppercase" fw={600} style={{ letterSpacing: '0.06em' }}>
+          {common.nav['vice-o-ads']}
+        </Text>
+        <Title order={1}>{section.title}</Title>
+        <Text style={{ lineHeight: 1.7 }} c="dimmed">
+          {section.content}
+        </Text>
+      </Stack>
+    </PageCard>
   )
 }

@@ -1,9 +1,4 @@
 {
-  "sidebar": {
-    "title": "Pages",
-    "subtitle": "Reflects current files and routes.",
-    "footer": "Built with Mantine and Next.js App Router."
-  },
   "nav": {
     "introduction": "Introduction",
     "modlitby": "Prayers",
@@ -18,7 +13,6 @@
     "utecha-v-pisni": "Comfort in song"
   },
   "placeholder": "Page content will be added.",
-  "sourceFile": "Source file:",
   "blog": {
     "empty": "No published posts yet. Create one in the",
     "emptyAdmin": "admin panel",
